@@ -1,16 +1,11 @@
-# React + Vite
+# 3 métodos do REACT:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## MAP
+## FILTER
+## REDUCE
 
-Currently, two official plugins are available:
+> MAP - Faz uma cópia e mexe nessa cópia, e deixa o original intacto. Cria um novo array sem modificar o original.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> FILTER - Cria um novo array e deixa somente o que será alterado.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> REDUCE - Realiza soma
