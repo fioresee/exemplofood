@@ -22,16 +22,24 @@ const Pedido = () => {
     //Função que altera a quantidade do pedido
     const AlterarQuantidade = (id, valor) => {
         setItems(prev=>
-            // Map: Percorre a lista para criar um novo array sem modificar o original
+            // MAP: Percorre a lista para criar um novo array sem modificar o original
             prev.map(item=>
                 // Ternário: Verifica se o item da iteração atual é o que deve ser alterado
                 // Spread(...item) : Adiciona o item a lista atual ou modifica
                 // Math.max : Objeto que garante que a quantidade nunca seja menor que 0
-                // Item: Retorna o item intacto caso o id não corresponda.
+                // Item: Retorna o item intacto caso o id não corresponda
                item.id===id ? {...item, quantidade:Math.max(0,item.quantidade + valor)}:item 
             )
         )
     }
+
+    // FILTER: Seleciona apenas os produtos disponíveis e do carrinho
+    const produtosDisponiveis = items.filter(item => item.disponivel);
+    const carrinho = items.filter(item.quantidade > 0);
+
+    // REDUCE: Calcula a soma dos itens (preço * quantidade) e adiciona a taxa de entrega
+    const subTotal = carrinho.reduce((ac,item) => ac.item.preco * item.quantidade,0);
+    const total = subTotal > 0 ? subTotal + taxaEntrega : 0;
 
 
 
